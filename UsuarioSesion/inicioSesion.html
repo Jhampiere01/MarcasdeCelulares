@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="http://localhost/base_datos/UsuarioSesion//inicioSesion.css">
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container inscribirse">
+            <form action="inicioRegistro.php" method="POST" enctype="multipart/form-data">
+                <h1>Crear Cuenta</h1>
+                <input type="text" placeholder="Usuario" name="usuario">
+                <input type="email" placeholder="Correo Electronico" name="correo">
+                <input type="password" placeholder="Contraseña" class="pass" id="pass1" name="contraseña">
+                <i class="bi bi-eye-fill togglePass" data-pass="pass1"></i>
+
+                <div class="campo">
+                    <label id="imagenLabel" for="imagen"><i class="bi bi-image"></i>Imagen:</label>
+                    <input id="imagen" type="file" class="input-campo" name="imagen" accept="image/*" required
+                        style="display: none;" />
+                </div>
+                <script>
+                    // Opcional: mostrar nombre del archivo seleccionado (si lo deseas)
+                    document.getElementById('imagen').addEventListener('change', function (event) {
+                        const label = document.querySelector('#imagenLabel');
+                        const fileName = event.target.files.length > 0 ? event.target.files[0].name : '';
+                        label.textContent = fileName || 'Subir Imagen';
+                    });
+                </script>
+
+                <button name="inscribirse">Inscribirse</button>
+            </form>
+        </div>
+
+        <div class="form-container iniciosesion ">
+            <form method="post" action="inicioSesion.php">
+                <h1>Iniciar Sesión</h1>
+                <input type="text" placeholder="Usuario" name="usuario" required>
+                <input type="password" placeholder="Contraseña" name="contraseña" class="pass" id="pass2" required>
+                <i class="bi bi-eye-fill togglePass" data-pass="pass2"></i>
+                <button type="submit">Iniciar sesión </button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-izquierdo">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>Ingrese sus datos</p>
+                    <button class="oculto" id="login">Iniciar sesión</button>
+                </div>
+                <div class="toggle-panel toggle-derecho">
+                    <h1>Hola, Usuario!</h1>
+                    <p>¿No estas registrado?</p>
+                    <button class="oculto" id="register">Inscribirse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://localhost/base_datos/UsuarioSesion/inicioSesion.js"></script>
+</body>
+
+</html>

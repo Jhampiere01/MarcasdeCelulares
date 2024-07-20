@@ -1,0 +1,169 @@
+/* Estilos de la pagina */
+body {
+    text-align: center;
+    font-family: 'Exo 2';
+    margin: 0;
+    padding: 0;
+    background-image: url(6282363.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+/* Estilos del header */
+header {
+    background-color: #498fbd;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    max-width: 100px;
+    filter: drop-shadow(0 0px 3px rgb(255, 255, 255));
+}
+
+header .logo img {
+    margin-top: -5px;
+    max-width: 100%;
+}
+
+header h2 {
+    font-size: 24px;
+    padding-left: 400px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-left: 80%;
+}
+
+.input {
+    height: 40px;
+    padding-left: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    width: 270px;
+}
+
+.input::placeholder {
+    color: #000000;
+}
+
+.icono {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+}
+
+.input:focus,
+.input-wrapper input:hover {
+    outline: none;
+    border-color: rgba(234, 76, 137, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeInUp 0.9s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table,
+th,
+td {
+    border: 2px solid rgb(154, 40, 40);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"] {
+    width: 70%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilos de los botones */
+.return-button {
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.return-button:hover {
+    background-color: #4687b3;
+    transform: scale(1.1);
+}
+
+.button-cell {
+    text-align: center;
+}
+
+.button-cell input[type="submit"][name="editar"] {
+    background-color: #27ae60;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-cell input[type="submit"][name="eliminar"] {
+    background-color: #e74c3c;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-cell input[type="submit"]:hover {
+    transform: translateY(-3px);
+}
+
+.button-cell input[type="submit"][name="editar"]:hover {
+    background-color: #2ecc71;
+}
+
+.button-cell input[type="submit"][name="eliminar"]:hover {
+    background-color: #c0392b;
+}

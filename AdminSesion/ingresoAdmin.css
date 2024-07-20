@@ -1,0 +1,166 @@
+/* Estilo de la pagina */
+body {
+    background-image: url(Fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Exo 2';
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cartas {
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeInUp 0.9s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    width: 220px;
+    height: 250px;
+    background: rgb(120, 234, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.card img {
+    width: 60%;
+    height: 50%;
+    margin-top: 40px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 25px;
+    border-radius: 30px;
+    background: #3d3a4e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%);
+    transition: all 0.475s;
+}
+
+.general {
+    margin-top: 25%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #48be3d;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    animation: fadeInUp 0.9s ease;
+}
+
+.general:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #e04444;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.general:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.general span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 15px 20px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 900;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.general:hover span {
+    color: #000000;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

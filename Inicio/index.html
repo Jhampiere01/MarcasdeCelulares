@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/base_datos/Inicio//style.css">
+</head>
+
+<body>
+    <div id="page">
+        <div id="container">
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="h3">Cargando...</div>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;">
+        <div class="card">
+            <div class="card-border-top"></div>
+            <div class="img">
+                <img src="admin.webp" alt="Imagen">
+            </div>
+            <span>Administradores</span>
+            <button onclick="window.location.href = '../AdminSesion/adminSesion.html'">Ingresar</button>
+        </div>
+
+        <div class="card">
+            <div class="card-border-top"></div>
+            <div class="img">
+                <img src="usuario.png" alt="Imagen">
+            </div>
+            <span>Usuarios</span>
+            <button onclick="window.location.href = '../UsuarioSesion/inicioSesion.html'">Ingresar</button>
+        </div>
+    </div>
+
+    <script src="http://localhost/base_datos/Inicio//index.js"></script>
+</body>
+
+</html>

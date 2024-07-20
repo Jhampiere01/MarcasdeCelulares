@@ -1,0 +1,126 @@
+/* Estilos de la pagina */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    background-image: url(Fondo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Exo 2';
+    overflow: hidden;
+}
+
+/* Estilos titulo del formulario */
+#titulo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos del formulario con transiciones */
+
+.card2 {
+    transition: all 0.2s;
+    width: 90%;
+    margin-left: 2px;
+    margin-top: -25px;
+}
+
+.card2:hover {
+    transform: scale(0.98);
+}
+
+/* Estilos campos del formulario */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 35px;
+    width: 100%;
+    animation: fadeInUp 0.9s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.campos {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    flex: 1;
+    max-width: 45%;
+}
+
+.campo label {
+    white-space: nowrap;
+}
+
+.input-campo {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    flex: 1;
+    padding: 5px 0;
+    margin-left: 5px;
+}
+
+.contenido i {
+    margin-right: 5px;
+}
+
+/* Estilos boton para enviar formulario */
+.button {
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.4s ease-in-out;
+    background-color: #252525;
+    color: white;
+    margin: auto;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(0, 255, 89, 0.745);
+    color: white;
+}
+
+.home i {
+    font-size: 25px;
+    color: yellow;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.home i:hover {
+    transform: scale(1.1);
+}

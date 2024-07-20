@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Celulares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/base_datos/Formulario//formulario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Estructura del formulario -->
+    <div class="card">
+        <div class="card2">
+            <!-- Enviara datos al archivo PHP en metodo POST -->
+            <form class="contenido" action="../Lista/conexion.php" method="POST" enctype="multipart/form-data">
+                <!-- Campos de entradas para el registros -->
+                <div class="home">
+                    <a href="../AdminSesion/ingresoAdmin.html">
+                        <i class="bi bi-house-fill"></i>
+                    </a>
+                </div>
+                <p id="titulo">Registro de Celulares</p>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="marca"><i class="bi bi-phone"></i>Marca:</label>
+                        <input class="input-campo" name="marca" placeholder="Ingrese la marca" required />
+                    </div>
+                    <div class="campo">
+                        <label for="modelo"><i class="bi bi-phone-flip"></i>Modelo:</label>
+                        <input class="input-campo" name="modelo" placeholder="Ingrese el modelo" required />
+                    </div>
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="año"><i class="bi bi-rocket-takeoff"></i>Lanzamiento:</label>
+                        <input class="input-campo" name="lanzamiento" placeholder="Ingrese el año" required />
+                    </div>
+                    <div class="campo">
+                        <label for="pantalla"><i class="bi bi-fullscreen"></i></i>Pantalla:</label>
+                        <input class="input-campo" name="pantalla" placeholder="Ingrese la pantalla" required />
+                    </div>
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="camara"><i class="bi bi-camera"></i></i>Camara:</label>
+                        <input class="input-campo" name="camara" placeholder="Ingrese la camara" required />
+                    </div>
+                    <div class="campo">
+                        <label for="procesador"><i class="bi bi-cpu"></i></i>Procesador:</label>
+                        <input class="input-campo" name="procesador" placeholder="Ingrese el procesador" required />
+                    </div>
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="memoria"><i class="bi bi-device-ssd"></i>Memoria:</label>
+                        <input class="input-campo" name="memoria" placeholder="Ingresa la memoria" required />
+                    </div>
+                    <div class="campo">
+                        <label for="ram"><i class="bi bi-sd-card"></i>RAM:</label>
+                        <input class="input-campo" name="ram" placeholder="Ingrese la memoria" required />
+                    </div>
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        <label for="bateria"><i class="bi bi-battery-full"></i></i>Bateria:</label>
+                        <input class="input-campo" name="bateria" placeholder="Ingresa la bateria" required />
+                    </div>
+                    <div class="campo">
+                        <label for="peso"><i class="bi bi-patch-question"></i>Peso:</label>
+                        <input class="input-campo" name="peso" placeholder="Ingrese el peso" required />
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="precio"><i class="bi bi-currency-dollar"></i>Precio:</label>
+                    <input class="input-campo" name="precio" placeholder="Ingrese el precio" required />
+                </div>
+
+                <div class="campo">
+                    <label id="imagenLabel" for="imagen"><i class="bi bi-image"></i>Imagen:</label>
+                    <input id="imagen" type="file" class="input-campo" name="imagen" accept="image/*" required
+                        style="display: none;" />
+                </div>
+
+                <!-- Boton para enviar los datos del formulario -->
+                <button type="submit" name="agregar" class="button">Agregar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Opcional: mostrar nombre del archivo seleccionado (si lo deseas)
+        document.getElementById('imagen').addEventListener('change', function (event) {
+            const label = document.querySelector('#imagenLabel');
+            const fileName = event.target.files.length > 0 ? event.target.files[0].name : '';
+            label.textContent = fileName || 'Subir Imagen';
+        });
+    </script>
+</body>
+
+</html>
